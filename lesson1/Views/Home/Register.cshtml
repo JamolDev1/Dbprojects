@@ -1,0 +1,45 @@
+<h3>Welcome to register</h3>
+<h5>Fill out the form</h5>
+@model lesson1.Models.AccountModel;
+
+
+<form class="mt-5 col bg-dark"  method="post" asp-action="Register" asp-controller="Home">
+
+    <div class="my-5 text-center text-light" style=" padding: auto" >
+        <div>
+            <label  asp-for="Name"></label>
+            <p style="margin-left:420px" class="col-lg-3 col-md-3">
+                
+                <input class="form-control" asp-for="Name">
+            </p>
+        </div>
+        <div class="text-center">
+            <label asp-for="UserName"></label>
+            <p style="margin-left:420px" class="col-lg-3 col-md-3">
+                <input class="form-control" asp-for="UserName">
+            </p>
+        </div>
+        <div class="text-center">
+            <label asp-for="Phone"></label>
+            <p style="margin-left:420px" class="col-lg-3 col-md-3">
+                <input class="form-control" asp-for="Phone">
+            </p>
+        </div>
+        <div class="text-center">
+            <label asp-for="Age"></label>
+            <p style="margin-left:420px" class="col-lg-3 col-md-3">
+                <input class="form-control" asp-for="Age">    
+            </p>
+        </div>
+        <div class="text-center">
+            <label asp-for="Password"></label>
+            <p style="margin-left:420px" class="col-lg-3 col-md-3">
+                <input class="form-control" asp-for="Password">    
+            </p>
+        </div>
+
+        <button class="btn btn-primary" type="submit" asp-action="Register" asp-controller="Home" mathod="post">Register</button>
+    </div>
+
+
+</form>

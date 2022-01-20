@@ -1,0 +1,34 @@
+@model AccountsModel;
+
+@if(Model.Accounts.Count == 0)
+{
+    <h2>Empty DataBase</h2>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Password</th>
+        </tr>
+        </thead>
+    @foreach(var account in Model.Accounts)
+    {
+            <tbody>
+            <tr>
+                <th scope="row"> @account.Id </th>
+                <td>@account.Name</td>
+                <td>@account.Age</td>
+                <td>@account.UserName</td>
+                <td>@account.Phone</td>
+                <td>@account.Password</td>
+            </tr>
+            </tbody>
+        }
+    </table>
+}
